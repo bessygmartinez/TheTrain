@@ -1,0 +1,45 @@
+body {
+    background-color: #084246;
+    color: #fcbc28;
+    background-image: url("../images/bg_tile.jpg");
+    background-position: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.teal-bg {
+    background-color: #084246;
+    border-radius: 10px;
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    color: #fcbc28;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.train-bg{
+    background-image: url("../images/train_bg.jpg");
+    background-position: center;
+    background-size: contain;
+}
+
+.heading-bg {
+    background-color: #286468;
+    border-radius: 10px;
+    letter-spacing: 3px;
+}
+
+.theading-bg {
+    background-color: #286468;
+    border-radius: 10px;
+    color: #fcbc28;
+}
+
+@media only screen and (max-width: 375px) {
+    .title{
+        font-size:35px;    
+    }
+
+}
