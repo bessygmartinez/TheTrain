@@ -1,7 +1,5 @@
 //Initialize Firebase
-<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-
-  var firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyCdUHBG_V4TYgYI64w3PFkoAicNarLrQq8",
     authDomain: "train-schedule-data-440ed.firebaseapp.com",
     databaseURL: "https://train-schedule-data-440ed.firebaseio.com",
@@ -21,7 +19,7 @@ $("#addTrainButton").on("click", function(event) {
 
     //Get user inputs and store in variable
     let trainName = $("#TrainNameInput").val().trim();
-    let trainDestination = $("#DestinationInput").val();trim();
+    let trainDestination = $("#DestinationInput").val().trim();
     let trainFrequency = $("#FrequencyInput").val().trim();
     let firstTrainDeparture = $("#DepartureTimeInput").val().trim();
 
@@ -36,4 +34,16 @@ $("#addTrainButton").on("click", function(event) {
     //Send new train info to Firebase database
     database.ref().push(newTrain);
 
-})
+    console.log(newTrain.name);
+    console.log(newTrain.destination);
+    console.log(newTrain.frequency);
+    console.log(newTrain.rate);
+
+    alert("Train successfully added!");
+
+    $("#TrainNameInput").val("")
+    $("#DestinationInput").val("");
+    $("#FrequencyInput").val("");
+    $("#DepartureTimeInput").val("");
+
+});
